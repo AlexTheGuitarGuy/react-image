@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, HTMLProps } from 'react'
+import img from '../../../assets/images/test1.jpeg'
 
-const Image: FC<any> = ({ src, alt, ...props }) => {
-  return <img src={src} alt={alt} {...props} />;
+const Image: FC<Omit<HTMLProps<HTMLImageElement>, 'src'>> = ({ alt, ...props }) => {
+  return <img src={img} alt={alt} {...props} />
 }
 
-export default Image;
+export default Image
