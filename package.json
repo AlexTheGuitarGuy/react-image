@@ -1,7 +1,7 @@
 {
   "name": "@AlexSeremet/react-image",
   "version": "0.1.0",
-  "description": "A rollup image displaying library that bundles the image src even if the image might not be shown",
+  "description": "A rollup image displaying library that bundles all images even if they might not be used",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",
   "types": "dist/index.d.ts",
@@ -16,10 +16,6 @@
     "dev": "rollup -c -w",
     "test": "jest",
     "lint": "eslint src",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "predeploy-storybook": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
     "format": "prettier --write \"src/**/*.+(js|jsx|ts|tsx|json|css|md|)\""
   },
   "repository": {
@@ -36,7 +32,7 @@
     "template"
   ],
   "bugs": {
-    "url": "https://github.com/MidoAhmed/rollup-react-library-starter/issues"
+    "url": "https://github.com/AlexTheGuitarGuy/react-image"
   },
   "homepage": "https://github.com/AlexTheGuitarGuy/react-image",
   "peerDependencies": {
@@ -49,20 +45,13 @@
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@rollup/plugin-url": "^8.0.2",
-    "@storybook/addon-essentials": "^7.5.3",
-    "@storybook/addon-interactions": "^7.5.3",
-    "@storybook/addon-links": "^7.5.3",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-webpack5": "^7.5.3",
-    "@storybook/testing-library": "0.0.14-next.2",
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.10",
     "@types/react": "^18.2.39",
@@ -84,8 +73,6 @@
     "rollup-plugin-dts": "^5.3.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.69.5",
-    "storybook": "^7.5.3",
     "tslib": "^2.6.2",
     "typescript": "^5.3.2"
   }

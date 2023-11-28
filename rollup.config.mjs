@@ -1,4 +1,3 @@
-// rollup.config.js
 import terser from '@rollup/plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
@@ -19,11 +18,13 @@ export default [
         file: pkg.main,
         format: 'cjs',
         sourcemap: true,
+        inlineDynamicImports: true,
       },
       {
         file: pkg.module,
         format: 'esm',
         sourcemap: true,
+        inlineDynamicImports: true,
       },
       /* {
 				file: 'dist/bundle.min.js',
@@ -40,7 +41,7 @@ export default [
       postcss(),
       terser(),
       image(),
-      url()
+      url(),
     ],
   },
   {

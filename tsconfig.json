@@ -107,7 +107,7 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     // create path for images
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@components/*": ["./src/components/*"]
     }
   }
 }
